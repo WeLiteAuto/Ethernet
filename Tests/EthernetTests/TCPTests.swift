@@ -18,7 +18,7 @@ final class TCPTests: XCTestCase {
 
     func testTCPClient() async throws{
 
-        let message = "toggle led1\n"
+        let message = "Hello TCP server!\n"
         guard let remoteAddress = try? SocketAddress(ipAddress: "192.168.50.179", port: 1234)
         else {
             fatalError("Unable to resolve address")
