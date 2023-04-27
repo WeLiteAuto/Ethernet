@@ -12,7 +12,7 @@ final class TCPEchoHandler : ChannelInboundHandler {
     public func channelRead(context: ChannelHandlerContext, data: NIOAny) {
         let byteBuffer = self.unwrapInboundIn(data)
         let message = byteBuffer.getString(at: byteBuffer.readerIndex, length: byteBuffer.readableBytes)
-        print("Received message from client: \(String(describing: message!))")
+        print("Received message from server: \(String(describing: message!))")
     }
 
     public func errorCaught(context: ChannelHandlerContext, error: Error) {
